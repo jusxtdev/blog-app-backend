@@ -5,7 +5,7 @@ const rootRouter = express.Router()
 rootRouter.get('/', (req : Request, res: Response) => {
     res.status(200).json({
         success : true,
-        msg : 'Blog App'
+        msg : 'Blog App Backend API'
     })
 })
 
