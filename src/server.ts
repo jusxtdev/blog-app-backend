@@ -1,7 +1,6 @@
-if (process.env.NODE_ENV !== "production") {
-  import("./app.js").then(({ default: app }) => {
-    app.listen(5000, () => {
-      console.log("Local server running on port 5000");
-    });
-  });
-}
+import app from "./app.js";
+import { ENV } from "./config/env.js";
+
+app.listen(ENV.PORT, () => {
+  console.log(`Server running on port ${ENV.PORT} (${ENV.NODE_ENV})`);
+});
